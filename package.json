@@ -12,8 +12,7 @@
   "lint": "turbo run lint",
   "test": "turbo run test",
   "preview": "turbo run preview",
-  "prisma:generate": "pnpm exec prisma generate --schema packages/db/schema.prisma",
-  "postinstall": "pnpm exec prisma generate --schema packages/db/schema.prisma"
+  "prisma:generate": "pnpm --filter @techcomparativas/db exec prisma generate"
 },
   "devDependencies": {
     "turbo": "^1.10.0",
