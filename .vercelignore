@@ -39,7 +39,7 @@ coverage/
 *.temp
 
 # Archivos específicos del monorepo
-packages/
+# packages/
 apps/web/src/components/
 apps/web/src/lib/
 
