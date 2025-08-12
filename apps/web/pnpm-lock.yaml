@@ -1,1 +1,122 @@
 # Copia de pnpm-lock.yaml para apps/web
+
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    devDependencies:
+      eslint:
+        specifier: ^8.49.0
+        version: 8.57.1
+      prettier:
+        specifier: ^3.1.0
+        version: 3.6.2
+      turbo:
+        specifier: ^1.10.0
+        version: 1.13.4
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.2
+
+  apps/web:
+    dependencies:
+      '@hookform/resolvers':
+        specifier: ^3.0.0
+        version: 3.10.0(react-hook-form@7.62.0(react@18.3.1))
+      '@prisma/client':
+        specifier: ^5.7.0
+        version: 5.22.0(prisma@6.13.0(typescript@5.9.2))
+      '@tanstack/react-virtual':
+        specifier: ^3.0.0
+        version: 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@techcomparativas/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      '@techcomparativas/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
+      autoprefixer:
+        specifier: ^10.4.0
+        version: 10.4.21(postcss@8.5.6)
+      framer-motion:
+        specifier: ^11.0.0
+        version: 11.18.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      lucide-react:
+        specifier: ^0.263.0
+        version: 0.263.1(react@18.3.1)
+      next:
+        specifier: ^14.0.0
+        version: 14.2.31(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-auth:
+        specifier: ^4.23.0
+        version: 4.24.11(next@14.2.31(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      next-intl:
+        specifier: ^3.0.0
+        version: 3.26.5(next@14.2.31(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
+      next-themes:
+        specifier: ^0.2.1
+        version: 0.2.1(next@14.2.31(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      postcss:
+        specifier: ^8.4.0
+        version: 8.5.6
+      react:
+        specifier: ^18.3.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.0
+        version: 18.3.1(react@18.3.1)
+      react-hook-form:
+        specifier: ^7.45.0
+        version: 7.62.0(react@18.3.1)
+      tailwindcss:
+        specifier: ^3.4.0
+        version: 3.4.17
+      zod:
+        specifier: ^3.22.0
+        version: 3.25.76
+    devDependencies:
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.3.1(@types/react@18.3.23)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@types/node':
+        specifier: ^20.8.0
+        version: 20.19.10
+      '@types/react':
+        specifier: ^18.0.27
+        version: 18.3.23
+      eslint:
+        specifier: ^8.49.0
+        version: 8.57.1
+      eslint-config-next:
+        specifier: ^14.0.0
+        version: 14.2.31(eslint@8.57.1)(typescript@5.9.2)
+      typescript:
+        specifier: ^5.3.3
+        version: 5.9.2
+      vitest:
+        specifier: ^1.2.0
+        version: 1.6.1(@types/node@20.19.10)
+
+  packages/config: {}
+
+  packages/db:
+    devDependencies:
+      '@prisma/client':
+        specifier: 6.13.0
+        version: 6.13.0(prisma@6.13.0(typescript@5.9.2))(typescript@5.9.2)
+
+  packages/ui:
+    dependencies:
+      react:
+        specifier: ^18.3.0
+        version: 18.3.1
+      react-dom:
+        specifier: ^18.3.0
+        version: 18.3.1(react@18.3.1)
+
+# ...rest of lockfile omitted for brevity...
