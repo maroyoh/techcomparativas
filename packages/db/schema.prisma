@@ -8,7 +8,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"                  // Prisma 6: NO env() aquí
+  provider = "sqlite" // Cambiado para desarrollo local y Vercel
   url      = env("DATABASE_URL")
 }
 
@@ -36,18 +36,14 @@ model Product {
   slug       String      @unique
   name       String
   brand      String
-  categoryId String?
-  category   Category?   @relation(fields: [categoryId], references: [id])
-
-  price     Float?
-  currency  String       @default("EUR")
-
-  // SQLite: sin arrays escalares → usa Json
-  images    Json
-  specs     Json
-  pros      Json
-  cons      Json
-
+  categoryId String
+  category   Category      @relation(fields: [categoryId], references: [id])
+  price      Float
+  currency   String        @default("EUR")
+  images     Json
+  specs      Json
+  pros       Json
+  cons       Json
   summaryMDX String
   published  Boolean     @default(false)
   createdAt  DateTime    @default(now())
@@ -63,21 +59,15 @@ model Product {
 }
 
 model Comparison {
-  id        String    @id @default(cuid())
-  title     String
-
-  // Evita listas escalares en SQLite: si quieres conservarlo, usa Json
-  criteria  Json
-
-  // Ganador (1) → nómbralo y enlaza con back-relation de Product
-  winnerId  String?
-  winner    Product?  @relation("WinningProduct", fields: [winnerId], references: [id])
-
-  createdById String?
-  createdAt   DateTime @default(now())
-
-  // Productos (M2M) → misma etiqueta que en Product
-  products  Product[] @relation("ProductsOnComparisons")
+  id            String      @id @default(uuid())
+  title         String
+  productIds    Json
+  criteria      Json
+  winnerId      String?
+  winner        Product?    @relation("WinningProduct", fields: [winnerId], references: [id])
+  createdById   String?
+  createdAt     DateTime    @default(now())
+  products      Product[]   @relation("ProductsOnComparisons")
 }
 
 model AffiliateLink {
