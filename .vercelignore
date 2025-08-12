@@ -44,5 +44,4 @@ apps/web/src/components/
 apps/web/src/lib/
 
 # Archivos de pnpm
-pnpm-lock.yaml
 .pnpm-store/
