@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "lib": ["dom", "dom.iterable", "es2024"],
+    "module": "esnext",
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowJs": false,
+    "jsx": "react-jsx",
+    "noEmit": true,
+    "baseUrl": "./",
+    "paths": {
+      "@/*": ["apps/web/src/*"],
+      "@ui/*": ["packages/ui/src/*"],
+      "@config/*": ["packages/config/*"],
+      "@db/*": ["packages/db/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", ".turbo"]
+}

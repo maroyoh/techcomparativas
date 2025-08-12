@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "title": "Discover and compare tech products",
+    "description": "Find the best devices, read reviews and shop through our affiliate links.",
+    "cta": "Start comparing"
+  },
+  "Legal": {
+    "AffiliatesTitle": "Affiliate program",
+    "AffiliatesContent": "techComparativas participates in affiliate programs. This means we may receive a commission for purchases made through our links at no extra cost to you.",
+    "PrivacyTitle": "Privacy policy",
+    "PrivacyContent": "We respect your privacy and only collect the information necessary to improve our service.",
+    "CookiesTitle": "Cookie policy",
+    "CookiesContent": "We use cookies to provide a better experience. You can disable them in your browser settings."
+  }
+}

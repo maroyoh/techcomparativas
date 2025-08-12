@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240" height="80" viewBox="0 0 240 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title">
+  <title>Logo de techComparativas</title>
+  <!--
+    Diseño minimalista: dos tarjetas superpuestas que simbolizan la
+    comparación entre productos y el nombre de la marca a la derecha.
+    Los colores se derivan de la paleta definida en el preset de Tailwind
+    (verde para primario, azul para secundario) y texto claro para
+    asegurar contraste en modo oscuro.
+  -->
+  <rect x="0" y="24" width="56" height="40" rx="6" fill="#22C55E" />
+  <rect x="12" y="12" width="56" height="40" rx="6" fill="#60A5FA" />
+  <text x="80" y="40" font-size="24" font-family="Inter, sans-serif" fill="#E5E7EB" font-weight="600">
+    tech
+  </text>
+  <text x="80" y="64" font-size="24" font-family="Inter, sans-serif" fill="#22C55E" font-weight="600">
+    Comparativas
+  </text>
+</svg>

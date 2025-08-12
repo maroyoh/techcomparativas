@@ -1,0 +1,99 @@
+// Esquema Prisma para la base de datos de techComparativas.
+//
+// Usa PostgreSQL en producción y SQLite opcional en desarrollo.  La
+// URL de conexión se define mediante la variable de entorno `DATABASE_URL`.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"                  // Prisma 6: NO env() aquí
+  url      = env("DATABASE_URL")
+}
+
+// ── MODELOS ─────────────────────────────────────────────────────────
+
+model User {
+  id           String  @id @default(cuid())
+  email        String  @unique
+  passwordHash String
+  role         String  @default("admin")
+}
+
+model Category {
+  id        String     @id @default(cuid())
+  slug      String     @unique
+  name      String
+  parentId  String?
+  parent    Category?  @relation("CategoryToParent", fields: [parentId], references: [id])
+  children  Category[] @relation("CategoryToParent")
+  products  Product[]
+}
+
+model Product {
+  id         String      @id @default(cuid())
+  slug       String      @unique
+  name       String
+  brand      String
+  categoryId String?
+  category   Category?   @relation(fields: [categoryId], references: [id])
+
+  price     Float?
+  currency  String       @default("EUR")
+
+  // SQLite: sin arrays escalares → usa Json
+  images    Json
+  specs     Json
+  pros      Json
+  cons      Json
+
+  summaryMDX String
+  published  Boolean     @default(false)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+
+  affiliateLinks AffiliateLink[]
+
+  // Relación M2M con Comparison (implícita) → nómbrala
+  comparisons Comparison[] @relation("ProductsOnComparisons")
+
+  // Back-relation del ganador → nómbrala
+  wonComparisons Comparison[] @relation("WinningProduct")
+}
+
+model Comparison {
+  id        String    @id @default(cuid())
+  title     String
+
+  // Evita listas escalares en SQLite: si quieres conservarlo, usa Json
+  criteria  Json
+
+  // Ganador (1) → nómbralo y enlaza con back-relation de Product
+  winnerId  String?
+  winner    Product?  @relation("WinningProduct", fields: [winnerId], references: [id])
+
+  createdById String?
+  createdAt   DateTime @default(now())
+
+  // Productos (M2M) → misma etiqueta que en Product
+  products  Product[] @relation("ProductsOnComparisons")
+}
+
+model AffiliateLink {
+  id           String   @id @default(cuid())
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id])
+  asin         String
+  marketplace  String
+  urlTemplate  String
+}
+
+model ChangeLog {
+  id        String   @id @default(cuid())
+  entity    String
+  entityId  String
+  diff      Json
+  authorId  String?
+  createdAt DateTime @default(now())
+}

@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "title": "Descubre y compara productos tecnológicos",
+    "description": "Encuentra los mejores dispositivos, lee opiniones y compra con nuestros enlaces de afiliado.",
+    "cta": "Comparar ahora"
+  },
+  "Legal": {
+    "AffiliatesTitle": "Programa de afiliados",
+    "AffiliatesContent": "techComparativas participa en programas de afiliados. Esto significa que podemos recibir una comisión por las compras realizadas a través de nuestros enlaces, sin coste adicional para ti.",
+    "PrivacyTitle": "Política de privacidad",
+    "PrivacyContent": "Respetamos tu privacidad y solo recopilamos la información necesaria para mejorar nuestro servicio.",
+    "CookiesTitle": "Política de cookies",
+    "CookiesContent": "Utilizamos cookies para ofrecer una mejor experiencia. Puedes desactivarlas en la configuración de tu navegador."
+  }
+}

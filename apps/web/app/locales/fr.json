@@ -1,0 +1,15 @@
+{
+  "Home": {
+    "title": "Découvrez et comparez des produits technologiques",
+    "description": "Trouvez les meilleurs appareils, lisez des avis et achetez via nos liens d'affiliation.",
+    "cta": "Comparer maintenant"
+  },
+  "Legal": {
+    "AffiliatesTitle": "Programme d'affiliation",
+    "AffiliatesContent": "techComparativas participe à des programmes d'affiliation. Cela signifie que nous pouvons recevoir une commission pour les achats effectués via nos liens, sans frais supplémentaires pour vous.",
+    "PrivacyTitle": "Politique de confidentialité",
+    "PrivacyContent": "Nous respectons votre vie privée et ne collectons que les informations nécessaires pour améliorer notre service.",
+    "CookiesTitle": "Politique de cookies",
+    "CookiesContent": "Nous utilisons des cookies pour offrir une meilleure expérience. Vous pouvez les désactiver dans les paramètres de votre navigateur."
+  }
+}
