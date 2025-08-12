@@ -32,6 +32,12 @@ importers:
       '@tanstack/react-virtual':
         specifier: ^3.0.0
         version: 3.13.12(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@techcomparativas/db':
+        specifier: workspace:*
+        version: link:../../packages/db
+      '@techcomparativas/ui':
+        specifier: workspace:*
+        version: link:../../packages/ui
       autoprefixer:
         specifier: ^10.4.0
         version: 10.4.21(postcss@8.5.6)
@@ -57,10 +63,10 @@ importers:
         specifier: ^8.4.0
         version: 8.5.6
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1(react@18.3.1)
       react-hook-form:
         specifier: ^7.45.0
@@ -96,15 +102,19 @@ importers:
 
   packages/config: {}
 
-  packages/db: {}
+  packages/db:
+    devDependencies:
+      '@prisma/client':
+        specifier: 6.13.0
+        version: 6.13.0(typescript@5.9.2)
 
   packages/ui:
     dependencies:
       react:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1
       react-dom:
-        specifier: ^18.2.0
+        specifier: ^18.3.0
         version: 18.3.1(react@18.3.1)
 
 packages:
@@ -440,6 +450,18 @@ packages:
       prisma: '*'
     peerDependenciesMeta:
       prisma:
+        optional: true
+
+  '@prisma/client@6.13.0':
+    resolution: {integrity: sha512-8m2+I3dQovkV8CkDMluiwEV1TxV9EXdT6xaCz39O6jYw7mkf5gwfmi+cL4LJsEPwz5tG7sreBwkRpEMJedGYUQ==}
+    engines: {node: '>=18.18'}
+    peerDependencies:
+      prisma: '*'
+      typescript: '>=5.1.0'
+    peerDependenciesMeta:
+      prisma:
+        optional: true
+      typescript:
         optional: true
 
   '@rollup/rollup-android-arm-eabi@4.46.2':
@@ -2816,6 +2838,10 @@ snapshots:
 
   '@prisma/client@5.22.0': {}
 
+  '@prisma/client@6.13.0(typescript@5.9.2)':
+    optionalDependencies:
+      typescript: 5.9.2
+
   '@rollup/rollup-android-arm-eabi@4.46.2':
     optional: true
 
@@ -3659,7 +3685,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.39.1(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1):
+  eslint-module-utils@2.12.1(@typescript-eslint/parser@8.39.1(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -3681,7 +3707,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.39.1(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1)(eslint@8.57.1)
+      eslint-module-utils: 2.12.1(@typescript-eslint/parser@8.39.1(eslint@8.57.1)(typescript@5.9.2))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.10.1(eslint-plugin-import@2.32.0)(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.16.1
       is-glob: 4.0.3
