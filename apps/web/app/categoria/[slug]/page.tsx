@@ -1,7 +1,12 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+<<<<<<< HEAD:apps/web/app/categoria/[slug]/page.tsx
 import { Card } from '@techcomparativas/ui';
 import { prisma } from '@techcomparativas/db/client';
+=======
+import { Card } from '@/components/Card';
+import { prisma } from '@/lib/prisma';
+>>>>>>> 43bc350 (chore: fix prisma postinstall on Windows + add DATABASE_URL):apps/web/app/[locale]/categoria/[slug]/page.tsx
 
 interface CategoryPageProps {
   params: { slug: string };

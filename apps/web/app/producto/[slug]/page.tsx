@@ -1,8 +1,13 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
+<<<<<<< HEAD:apps/web/app/producto/[slug]/page.tsx
 import { prisma } from '@techcomparativas/db/client';
 import { Button, Card } from '@techcomparativas/ui';
+=======
+import { Button, Card } from '@/components';
+import { prisma } from '@/lib/prisma';
+>>>>>>> 43bc350 (chore: fix prisma postinstall on Windows + add DATABASE_URL):apps/web/app/[locale]/producto/[slug]/page.tsx
 
 interface ProductPageProps {
   params: { slug: string };

@@ -1,6 +1,11 @@
 import { notFound } from 'next/navigation';
+<<<<<<< HEAD:apps/web/app/comparacion/[id]/page.tsx
 import { prisma } from '@techcomparativas/db/client';
 import { Card } from '@techcomparativas/ui';
+=======
+import { prisma } from '@/lib/prisma';
+import { Card } from '@/components/Card';
+>>>>>>> 43bc350 (chore: fix prisma postinstall on Windows + add DATABASE_URL):apps/web/app/[locale]/comparacion/[id]/page.tsx
 
 interface ComparisonPageProps {
   params: { id: string };

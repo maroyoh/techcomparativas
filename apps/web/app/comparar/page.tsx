@@ -1,6 +1,11 @@
 import { Suspense } from 'react';
+<<<<<<< HEAD:apps/web/app/comparar/page.tsx
 import { Button } from '@techcomparativas/ui';
 import { prisma } from '@techcomparativas/db/client';
+=======
+import { Button } from '@/components/Button';
+import { prisma } from '@/lib/prisma';
+>>>>>>> 43bc350 (chore: fix prisma postinstall on Windows + add DATABASE_URL):apps/web/app/[locale]/comparar/page.tsx
 
 /**
  * Página de comparación de productos.
