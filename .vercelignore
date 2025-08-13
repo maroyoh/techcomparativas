@@ -7,12 +7,10 @@
 **/.turbo
 **/.cache
 
-# env
 .env
 .env.*.local
 apps/**/.env*
 packages/**/.env*
 
-# editor/OS
 .DS_Store
 *.log
